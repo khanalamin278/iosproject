@@ -31,7 +31,6 @@ public class IosBaseTest {
         service.start();
 
         XCUITestOptions options = new XCUITestOptions();
-//        options.setDeviceName("iPhone 14 Plus");
         options.setDeviceName("iPhone 14 Pro Max");
         options.setApp("/Users/mobile_2/Downloads/ios-uicatalog-master/UIKitCatalog/build/Release-iphonesimulator/UIKitCatalog-iphonesimulator.app");
         options.setPlatformVersion("16.4");
@@ -45,35 +44,6 @@ public class IosBaseTest {
 
 
     }
-//    IOSDriver driver;
-//    AppiumDriverLocalService service;
-//
-//    @BeforeClass //
-//    public void ConfigarAppium() throws MalformedURLException, URISyntaxException {
-//        service = new AppiumServiceBuilder()
-//                //Appium code --> Appium server --> mobile.
-//                .withAppiumJS(new File("//opt//homebrew//lib//node_modules//appium//index.js"))
-//                .withIPAddress("127.0.0.1")
-//                .usingPort(4750)
-//                .build();
-//
-//        service.start();
-//        System.out.println("BeforeClass..");
-//
-//        XCUITestOptions options = new XCUITestOptions();
-//
-//        options.setDeviceName("iPhone 14 Pro Max");
-//
-//        options.setApp("/Users/mobile_2/Downloads/ios-uicatalog-master/UIKitCatalog/build/Release-iphonesimulator/UIKitCatalog-iphonesimulator.app");
-//
-//        options.setPlatformVersion("16.4");
-//        options.setWdaLaunchTimeout(Duration.ofSeconds(20));
-//
-//        driver = new IOSDriver(new URI("http://127.0.0.1:4750").toURL(),options);
-//
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//    }
-
 
     @AfterClass
     public void tearDown() {
