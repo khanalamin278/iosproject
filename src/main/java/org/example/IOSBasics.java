@@ -12,5 +12,10 @@ public class IOSBasics extends IosBaseTest {
         driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`label=='Text Entry'`]")).click();
         driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeCell")).sendKeys("Hello World");
         driver.findElement(AppiumBy.accessibilityId("OK")).click();
+
+        driver.findElement(AppiumBy.iOSNsPredicateString("type == 'XCUIElementTypeStaticText' AND value BEGINSWITH[C] 'Confirm'")).click();
+        String text= driver.findElement(AppiumBy.iOSNsPredicateString("name BEGINSWITH[C] 'A message'")).getText();
+        System.out.println(text);
+        driver.findElement(AppiumBy.iOSNsPredicateString("label == 'Confirm'")).click();
     }
 }
