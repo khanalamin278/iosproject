@@ -15,14 +15,11 @@ import java.util.Objects;
 
 public class IOSLongPress extends IosBaseTest {
     @Test
-    public void longPressText() {
+    public void longPressText() throws InterruptedException {
 
         driver.findElement(AppiumBy.accessibilityId("Steppers")).click();
         WebElement ele = driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='Increment'`][3]"));
-        Map<String, Objects> params = new HashMap<>();
-//        params.put("element",((RemoteWebElement)ele).getId());
-//        params.put("duration", 5);
-        driver.executeScript("mobile: touchAndHold",params);
+        longPressIos(ele);
 
     }
 }

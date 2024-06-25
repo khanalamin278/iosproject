@@ -4,6 +4,8 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.*;
 
 import java.io.File;
@@ -11,6 +13,9 @@ import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 
 public class IosBaseTest {
@@ -44,6 +49,15 @@ public class IosBaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 
+    }
+
+    public  void longPressIos(WebElement element){
+
+        Map<String, Object> params = new HashMap<>();
+
+        params.put("element", ((RemoteWebElement)element).getId());
+        params.put("duration",5);
+        driver.executeScript("mobile:touchAndHold", params);
     }
 
     @AfterClass
