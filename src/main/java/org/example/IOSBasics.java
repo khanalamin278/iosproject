@@ -1,7 +1,6 @@
 package org.example;
 
 import io.appium.java_client.AppiumBy;
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class IOSBasics extends IosBaseTest {
