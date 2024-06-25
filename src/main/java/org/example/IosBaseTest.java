@@ -36,7 +36,8 @@ public class IosBaseTest {
 
         XCUITestOptions options = new XCUITestOptions();
         options.setDeviceName("iPhone 14 Pro Max");
-        options.setApp("/Users/mobile_2/Downloads/ios-uicatalog-master/UIKitCatalog/build/Release-iphonesimulator/UIKitCatalog-iphonesimulator.app");
+        options.setApp("//Users//mobile_2//Downloads//resources//TestApp3.app");
+        //options.setApp("/Users/mobile_2/Downloads/ios-uicatalog-master/UIKitCatalog/build/Release-iphonesimulator/UIKitCatalog-iphonesimulator.app");
         options.setPlatformVersion("16.4");
         options.setWdaLocalPort(8150);
         options.setWdaLaunchTimeout(Duration.ofSeconds(20));
