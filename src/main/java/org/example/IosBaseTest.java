@@ -34,6 +34,7 @@ public class IosBaseTest {
         options.setDeviceName("iPhone 14 Pro Max");
         options.setApp("/Users/mobile_2/Downloads/ios-uicatalog-master/UIKitCatalog/build/Release-iphonesimulator/UIKitCatalog-iphonesimulator.app");
         options.setPlatformVersion("16.4");
+        options.setWdaLocalPort(8150);
         options.setWdaLaunchTimeout(Duration.ofSeconds(20));
 
 
